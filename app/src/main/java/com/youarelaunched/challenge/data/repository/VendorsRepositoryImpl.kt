@@ -15,10 +15,13 @@ class VendorsRepositoryImpl @Inject constructor(
     private val api: ApiVendors
 ) : VendorsRepository {
 
-    override suspend fun getVendors(): List<Vendor> = withContext(workDispatcher) {
-        api.getVendors().map {
-            it.toVendor()
-        }
+    override suspend fun getVendors(
+        companyName: String?,
+    ): List<Vendor> = withContext(workDispatcher) {
+        throw java.lang.IllegalArgumentException("smth")
+//        api.getVendors(companyName).map {
+//            it.toVendor()
+//        }
     }
 
     private suspend fun NetworkVendor.toVendor() = coroutineScope {

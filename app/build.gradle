@@ -75,9 +75,13 @@ dependencies {
     implementation coil.svg
 
     implementation accompanist.flowLayout
-
     implementation hiltDependencies.lib
     kapt hiltDependencies.kapt
 
     implementation retrofit.jsonConverter
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation "io.mockk:mockk-android:1.13.4"
+    testImplementation "io.mockk:mockk-agent:1.13.4"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
 }
