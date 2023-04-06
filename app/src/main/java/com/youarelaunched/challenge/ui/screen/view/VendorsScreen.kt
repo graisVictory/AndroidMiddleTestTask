@@ -101,13 +101,14 @@ private fun EmptyResultBlock() {
     ) {
         Column {
             Text(
+                modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
                 text = stringResource(id = R.string.msg_title_no_results),
                 color = colorResource(id = R.color.eucaliptus),
                 fontWeight = FontWeight(700),
                 textAlign = TextAlign.Center,
             )
             Text(
-                modifier = Modifier.padding(top = 8.dp),
+                modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
                 text = stringResource(id = R.string.msg_no_result_details),
                 color = colorResource(id = R.color.granite_gray),
                 textAlign = TextAlign.Center,
